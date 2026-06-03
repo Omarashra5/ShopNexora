@@ -1,36 +1,41 @@
-"use client";
-
 import "./globals.css";
-import { useEffect } from "react";
-import { useThemeStore } from "@/store/themeStore";
+
 import Navbar from "./components/Navbar";
-import { Toaster } from "react-hot-toast";
 import AuthProvider from "./components/providers/AuthProvider";
+import { Toaster } from "react-hot-toast";
+
+import ThemeClient from "./components/ThemeClient";
+
+export const metadata = {
+  title: "Nexora",
+  icons: {
+    icon: "/Nexora-removebg-preview.svg",
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const theme = useThemeStore((s) => s.theme);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle(
-      "dark",
-      theme === "dark"
-    );
-  }, [theme]);
-
   return (
     <html lang="en">
-      <body>
+      <body className="bg-slate-950 text-white">
+
         <AuthProvider>
+
+          <ThemeClient />
+
           <Navbar />
 
-          {children}
+          <main className="min-h-screen">
+            {children}
+          </main>
 
           <Toaster />
+
         </AuthProvider>
+
       </body>
     </html>
   );

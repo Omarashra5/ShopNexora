@@ -66,19 +66,70 @@ export default function Navbar() {
                 />
               )}
 
-              <button
-                onClick={() => signOut()}
-                className="bg-red-500 px-4 py-2 rounded-lg text-sm"
-              >
-                Logout
-              </button>
+             <button
+  onClick={() => signOut()}
+  className="
+    px-5 py-2.5
+    rounded-xl
+    bg-white/5
+    border border-red-500/30
+    text-red-400
+    backdrop-blur-xl
+    hover:bg-red-500/10
+    hover:border-red-500/50
+    hover:scale-[1.03]
+    transition
+    shadow-lg
+    shadow-red-500/10
+  "
+>
+  Logout
+</button>
             </div>
           ) : (
-            <button
+                      <button
               onClick={() => signIn("google")}
-              className="px-4 py-2 rounded-lg bg-white text-black font-medium"
+              className="
+    flex items-center gap-3
+    px-5 py-2.5
+    rounded-xl
+    bg-white/5
+    border border-white/10
+    text-white
+    backdrop-blur-xl
+    hover:bg-white/10
+    hover:scale-[1.03]
+    transition
+    shadow-lg
+    shadow-black/30
+  "
             >
-              Login
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.9-6.9C36.64 2.46 30.74 0 24 0 14.62 0 6.51 5.38 2.56 13.22l8.02 6.22C12.36 13.13 17.74 9.5 24 9.5z"
+                />
+                <path
+                  fill="#4285F4"
+                  d="M46.98 24.55c0-1.64-.15-3.21-.43-4.73H24v9h12.8c-.56 3-2.26 5.54-4.81 7.25l7.46 5.8c4.35-4.01 6.83-9.92 6.83-17.32z"
+                />
+                <path
+                  fill="#FBBC05"
+                  d="M10.58 28.44c-1.01-3-1.01-6.23 0-9.23l-8.02-6.22C.92 16.36 0 20.09 0 24s.92 7.64 2.56 11.01l8.02-6.57z"
+                />
+                <path
+                  fill="#34A853"
+                  d="M24 48c6.74 0 12.64-2.22 16.85-6.05l-7.46-5.8c-2.1 1.4-4.78 2.23-9.39 2.23-6.26 0-11.64-3.63-13.42-8.95l-8.02 6.57C6.51 42.62 14.62 48 24 48z"
+                />
+              </svg>
+
+              <span className="font-medium">
+                Login
+              </span>
             </button>
           )}
 
@@ -118,19 +169,70 @@ export default function Navbar() {
                 <span className="text-sm">{session.user?.name}</span>
               </div>
 
-              <button
-                onClick={() => signOut()}
-                className="bg-red-500 px-4 py-2 rounded-lg"
-              >
-                Logout
-              </button>
+        <button
+  onClick={() => signOut()}
+  className="
+    px-5 py-2.5
+    rounded-xl
+    bg-white/5
+    border border-red-500/30
+    text-red-400
+    backdrop-blur-xl
+    hover:bg-red-500/10
+    hover:border-red-500/50
+    hover:scale-[1.03]
+    transition
+    shadow-lg
+    shadow-red-500/10
+  "
+>
+  Logout
+</button>
             </>
           ) : (
             <button
               onClick={() => signIn("google")}
-              className="px-4 py-2 rounded-lg bg-white text-black"
+              className="
+    flex items-center gap-3
+    px-5 py-2.5
+    rounded-xl
+    bg-white/5
+    border border-white/10
+    text-white
+    backdrop-blur-xl
+    hover:bg-white/10
+    hover:scale-[1.03]
+    transition
+    shadow-lg
+    shadow-black/30
+  "
             >
-              Login with Google
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.9-6.9C36.64 2.46 30.74 0 24 0 14.62 0 6.51 5.38 2.56 13.22l8.02 6.22C12.36 13.13 17.74 9.5 24 9.5z"
+                />
+                <path
+                  fill="#4285F4"
+                  d="M46.98 24.55c0-1.64-.15-3.21-.43-4.73H24v9h12.8c-.56 3-2.26 5.54-4.81 7.25l7.46 5.8c4.35-4.01 6.83-9.92 6.83-17.32z"
+                />
+                <path
+                  fill="#FBBC05"
+                  d="M10.58 28.44c-1.01-3-1.01-6.23 0-9.23l-8.02-6.22C.92 16.36 0 20.09 0 24s.92 7.64 2.56 11.01l8.02-6.57z"
+                />
+                <path
+                  fill="#34A853"
+                  d="M24 48c6.74 0 12.64-2.22 16.85-6.05l-7.46-5.8c-2.1 1.4-4.78 2.23-9.39 2.23-6.26 0-11.64-3.63-13.42-8.95l-8.02 6.57C6.51 42.62 14.62 48 24 48z"
+                />
+              </svg>
+
+              <span className="font-medium">
+                Login
+              </span>
             </button>
           )}
 
